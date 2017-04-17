@@ -1,0 +1,2 @@
+<span ng-if="!$ctrl.editing" ng-click="$ctrl.editTodo()">{{$ctrl.item.todo}}</span>
+<input ng-if="$ctrl.editing" ng-model="$ctrl.item.todo" ng-blur="$ctrl.updateTodo($ctrl.item)" autofocus></input>

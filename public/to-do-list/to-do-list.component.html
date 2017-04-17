@@ -1,0 +1,9 @@
+<i ng-if="$ctrl.loading" class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+<div ng-if="!$ctrl.loading">
+  <ul>
+    <li ng-repeat="item in $ctrl.todos">
+      <to-do-item item="item"></to-do-item>
+    </li>
+  </ul>
+  <add-to-do on-todo-created="$ctrl.loadList()"></add-to-do>
+</div>

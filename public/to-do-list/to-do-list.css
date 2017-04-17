@@ -1,0 +1,13 @@
+to-do-list ul {
+  list-style-type: none;
+}
+
+to-do-list li {
+  cursor: pointer;
+  cursor: hand;
+}
+
+to-do-list li:hover {
+  font-weight: bold;
+  background-color: lightsalmon
+}
