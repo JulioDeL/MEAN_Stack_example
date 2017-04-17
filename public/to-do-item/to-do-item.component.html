@@ -1,6 +1,6 @@
-<span ng-class="{'to-do-done': $ctrl.item.isDone}" ng-if="!$ctrl.editing" ng-click="$ctrl.editTodo()">{{$ctrl.item.todo}}</span>
+<span ng-class="{'done': $ctrl.item.isDone}" ng-if="!$ctrl.editing" ng-click="$ctrl.editTodo()">{{$ctrl.item.todo}}</span>
 <span ng-if="$ctrl.editing">
   <input ng-model="$ctrl.item.todo" ng-blur="$ctrl.updateTodo($ctrl.item)" autofocus></input>
-  <i ng-if="!$ctrl.item.isDone" class="fa fa-pencil-square-o" ng-click="$ctrl.markTodoAsDone($ctrl.item)"></i>
+  <i ng-if="!$ctrl.item.isDone" class="fa fa-check" ng-click="$ctrl.markTodoAsDone($ctrl.item)"></i>
   <i class="fa fa-times" ng-click="$ctrl.removeTodo($ctrl.item)"></i>
 </span>
