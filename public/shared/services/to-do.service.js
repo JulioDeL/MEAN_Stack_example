@@ -12,6 +12,10 @@ angular.module('toDoListApp')
       return $http.get('/api/todos/' + username);
     }
 
+    self.remove = function (todo) {
+      return $http.delete('/api/todo/' + todo._id);
+    }
+
     self.update = function (todo) {
       return $http.post('/api/todo', { id: todo._id, todo: todo.todo, isDone: todo.isDone, hasAttachment: todo.hasAttachment });
     }

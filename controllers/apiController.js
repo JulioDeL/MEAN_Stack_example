@@ -47,8 +47,8 @@ module.exports = function (app) {
         }
     });
 
-    app.delete('/api/todo', function (req, res) {
-        Todos.findByIdAndRemove(req.body.id, function (err) {
+    app.delete('/api/todo/:id', function (req, res) {
+        Todos.findByIdAndRemove(req.params.id, function (err) {
             if (err) throw errr;
             res.send('Success');
         });
